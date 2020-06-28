@@ -49,6 +49,11 @@ Id of your OneDrive drive. You can get it by following:
 ###### ONE_DRIVE_FOLDER_RELATIVE_PATH
 
 Relative path of folder that has your files. For example if you want to transfer files which are located in `OneDrive->Personal Files->Photos->Exciting Day`, then you should provide `ONE_DRIVE_FOLDER_RELATIVE_PATH=Personal Files/Photos/Exciting Day` as environment variable.
+
+## Authenticate with Google Cloud
+
+If you run the script in a Compute Engine which is located in the same project with the bucket, you won't need to authenticate. But if you are outside of the Google Cloud, you should visit https://cloud.google.com/docs/authentication/getting-started and follow the instructions to authenticate with Google Cloud.
+
 ## How to Run
 
 - `npm run build`
