@@ -48,7 +48,13 @@ async function upload(bucket: Bucket, fileName: string, fileId: string) {
       accessToken: process.env.ONE_DRIVE_ACCESS_TOKEN,
       itemId: fileId,
     });
-    fileStream.pipe(file.createWriteStream({ gzip: true }))
+    fileStream.pipe(
+      file.createWriteStream({ gzip: true })
+        .on("error", (err) => {
+          console.error("Error in writable stream", err)
+          reject();
+        })
+    )
       .on("error", (err: any) => {
         console.error("Error while uploading: ", err);
         reject();
