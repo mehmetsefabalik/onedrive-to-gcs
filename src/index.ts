@@ -17,14 +17,6 @@ async function main() {
     );
     for (const driveFile of response.data.value) {
       console.log("processing: ", driveFile.name);
-
-      const file = bucket.file(driveFile.name);
-
-      const fileStream = oneDriveAPI.items.download({
-        accessToken: process.env.ONE_DRIVE_ACCESS_TOKEN,
-        itemId: driveFile.id,
-      });
-      fileStream.pipe(file.createWriteStream({ gzip: true }));
       try {
         await upload(bucket, driveFile.name, driveFile.id);
       } catch (e) {
