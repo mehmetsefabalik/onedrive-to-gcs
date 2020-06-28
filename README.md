@@ -1,4 +1,4 @@
-# onedrive-to-gsc
+# OneDrive to Google Cloud Storage
 
 Transfer files from Microsoft OneDrive to Google Cloud Storage.
 
