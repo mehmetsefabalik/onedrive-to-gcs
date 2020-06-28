@@ -5,8 +5,6 @@ import Axios from "axios";
 
 dotenv.config();
 
-console.log(process.env.ONE_DRIVE_ACCESS_TOKEN)
-
 async function main() {
   const storage = new Storage();
 
@@ -30,7 +28,7 @@ async function main() {
       try {
         await upload(bucket, driveFile.name, driveFile.id);
       } catch (e) {
-        
+
       }
     }
   } catch (e) {
