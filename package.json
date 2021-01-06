@@ -13,7 +13,7 @@
     "@google-cloud/storage": "^5.1.1",
     "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "onedrive-api": "^0.3.4"
   },
